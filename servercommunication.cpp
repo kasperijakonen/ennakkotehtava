@@ -16,14 +16,13 @@ ServerCommucation::ServerCommucation()
 
 bool ServerCommucation::fetch()
 {
-    //reply_ = m_manager->get(QNetworkRequest(QUrl("http://88.193.159.113:8081/sightings")));
-    reply_ = m_manager->get(QNetworkRequest(QUrl("http://88.193.159.113:8081/sightings")));
+    reply_ = m_manager->get(QNetworkRequest(QUrl("http://localhost:8081/sightings")));
     return true;
 }
 
 void ServerCommucation::fetchSpecies()
 {
-    networkManager->get(QNetworkRequest(QUrl("http://88.193.159.113:8081/species")));
+    networkManager->get(QNetworkRequest(QUrl("http://localhost:8081/species")));
 }
 
 
@@ -150,7 +149,7 @@ bool ServerCommucation::postSighting(const QString &species, const QString &desc
 
     // Establishing network connection
     QNetworkAccessManager* manager = new QNetworkAccessManager();
-    QUrl url = QUrl("http://88.193.159.113:8081/sightings");
+    QUrl url = QUrl("http://localhost:8081/sightings");
 
     // Establishing network requet
     QNetworkRequest request;
