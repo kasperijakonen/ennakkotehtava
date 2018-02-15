@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>AddNewSighting_Page.qml</file>
+        <file>Sightings_Page.qml</file>
+    </qresource>
+</RCC>
